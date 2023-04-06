@@ -41,9 +41,9 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-backend/data/
-backend/venv/
-backend/__pycache__/
+backend/data/*
+backend/venv/*
+backend/__pycache__/*
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
@@ -128,3 +128,4 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+backend/__pycache__/tfidf.cpython-310.pyc

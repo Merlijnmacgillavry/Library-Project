@@ -1,8 +1,10 @@
 import { Box, Button, Group, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import React from 'react'
+import React, { useContext } from 'react'
+import { SearchContext } from '../providers/SearchProvider';
 
 export default function SearchBar() {
+    const { search } = useContext(SearchContext)
     const form = useForm({
         initialValues: {
             query: '',
@@ -12,20 +14,13 @@ export default function SearchBar() {
             query: (query) => (query === '' ? 'Must not be empty!' : null),
         },
     });
-
-    function search(query: string) {
-        fetch('http://localhost:5000/search?' + new URLSearchParams({
-            query: query,
-            page: '1'
-        })).then((response) => {
-            response.json().then((value) => {
-                console.log(value)
-            })
-        })
+    function executeQuery(query: string){
+        search(query)
     }
 
+
     return (
-        <form onSubmit={form.onSubmit((values) => search(values.query))} style={{ width: '100%' }}>
+        <form onSubmit={form.onSubmit((values) => executeQuery(values.query))} style={{ width: '100%' }}>
             <Group w={'100%'} align='end' mt="md" noWrap >
                 <TextInput
 
