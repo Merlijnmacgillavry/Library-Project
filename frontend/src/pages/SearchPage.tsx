@@ -3,37 +3,24 @@ import React, { useState } from 'react'
 import { myTheme } from '../mantine.theme';
 import logo from '../assets/logo_tudelft.png';
 import SearchBar from '../components/SearchBar';
+import SearchResults from '../components/SearchResults';
 
 export default function SearchPage() {
     const theme = useMantineTheme()
 
     const [opened, setOpened] = useState(false);
 
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedFilter, setSelectedFilter] = useState('');
+    // const filteredData = data.filter((item) => {
+    //     if (selectedFilter && item.category !== selectedFilter) {
+    //         return false;
+    //     }
+    //     if (searchTerm && !item.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+    //         return false;
+    //     }
+    //     return true;
+    // });
 
-    const data = [
-        { id: 1, name: 'Item 1', category: 'Category A' },
-        { id: 2, name: 'Item 2', category: 'Category B' },
-        { id: 3, name: 'Item 3', category: 'Category A' },
-        { id: 4, name: 'Item 4', category: 'Category C' },
-        { id: 5, name: 'Item 5', category: 'Category B' },
-        { id: 6, name: 'Item 6', category: 'Category A' },
-        { id: 7, name: 'Item 7', category: 'Category C' },
-        { id: 8, name: 'Item 8', category: 'Category B' },
-    ];
-
-    const filteredData = data.filter((item) => {
-        if (selectedFilter && item.category !== selectedFilter) {
-            return false;
-        }
-        if (searchTerm && !item.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-            return false;
-        }
-        return true;
-    });
-
-    const categories = Array.from(new Set(data.map((item) => item.category)));
+    // const categories = Array.from(new Set(data.map((item) => item.category)));
 
     return (
         <AppShell
@@ -77,6 +64,7 @@ export default function SearchPage() {
         >
             <Stack h={300} sx={(theme) => ({ backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] })}>
                 <SearchBar />
+                <SearchResults />
             </Stack>
         </AppShell >
     )
