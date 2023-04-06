@@ -33,3 +33,11 @@ def search():
 
 if __name__ == '__main__':
     app.run()
+
+
+# TODO:
+# Seperate dataframe, preprocessing to seperate file
+# Make OPENAI class
+# Make BM25 class
+# Make Comparator class that outputs:
+# query, TFIDF, BM25, OPENAI, Current Library
