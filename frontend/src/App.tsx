@@ -5,14 +5,15 @@ import './App.css';
 import { myTheme } from './mantine.theme';
 import { MantineProvider, useMantineTheme } from '@mantine/core';
 import SearchPage from './pages/SearchPage';
+import SearchProvider from './providers/SearchProvider';
 
 function App() {
   return (
     <MantineProvider theme={myTheme} withNormalizeCSS withGlobalStyles >
 
-      <div className="main">
+      <SearchProvider>
         <SearchPage />
-      </div>
+      </SearchProvider>
     </MantineProvider>
   )
 }
