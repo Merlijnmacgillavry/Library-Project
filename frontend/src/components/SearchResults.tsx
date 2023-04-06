@@ -1,24 +1,25 @@
-import React, {useContext, useState} from 'react'
+import React, { useContext, useState } from 'react'
 import { Card, Pagination, Stack } from '@mantine/core';
 import { SearchContext } from '../providers/SearchProvider';
+import SearchResultCard from './SearchResultCard';
 
 export default function SearchResults() {
-    const { changePage, results} = useContext(SearchContext)
+  const { changePage, results } = useContext(SearchContext)
 
-    const [activePage, setPage] = useState(1);
-//   return <Pagination value={activePage} onChange={setPage} total={10} />;
+  const [activePage, setPage] = useState(1);
+  //   return <Pagination value={activePage} onChange={setPage} total={10} />;
   return (
     <Stack>
-        {results.map((res: SearchResult)=>{
-            return <Card>{res.title} - {res.author}</Card>
-        })}
-      
+      {results.map((data: SearchResultT, i: number) => {
+        return <SearchResultCard key={i} data={data} />
+      })}
+
     </Stack>
   )
 }
 
-export type SearchResult={
-    uuid: string
+export type SearchResultT = {
+  uuid: string
   "repository link": string
   title: string
   author: string
@@ -43,3 +44,4 @@ export type SearchResult={
   project: any
   coordinates: any
 }
+

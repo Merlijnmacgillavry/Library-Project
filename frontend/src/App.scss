@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.searchResultCard {
+  &-container {
+    display: flex;
+    img {
+      cursor: pointer;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25em;
+      h5 {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      :last-child {
+        font-size: 14px;
+        font-style: italic;
+      }
+    }
+  }
+}
