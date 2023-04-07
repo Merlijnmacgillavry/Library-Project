@@ -1,4 +1,5 @@
 import os
+import pickle
 import backoff
 import numpy as np
 import openai
@@ -8,10 +9,11 @@ from utils import CustomFormatter
 from dotenv import load_dotenv, find_dotenv
 from tqdm import tqdm as td
 from sentence_transformers import SentenceTransformer
+from transformers import AutoTokenizer, TFAutoModel
 
 
 class SBERT:
-    def __init__(self, model_name=f'sbert_model.csv', data_name='data.csv', records_per_page=20):
+    def __init__(self, model_name=f'SBERT_model.pkl', data_name='data.csv', records_per_page=20):
         self.init_logger()
         self.logger.debug(f"Initializing {__class__.__name__}...")
 
@@ -65,7 +67,8 @@ class SBERT:
         else:
             self.logger.debug(f"Loading model '{self.model_name}'!")
             with open(self.model_name, 'rb') as file:
-                self.model = pd.read_csv(file)
+                self.model = pickle.load(file)
+            self.model = self.model.numpy()
             self.logger.info(f"Loaded {__class__.__name__} model.")
             self.logger.debug(f"Loading data '{self.data_name}'!")
             self.data = pd.read_csv(self.data_name)
@@ -74,10 +77,17 @@ class SBERT:
     def create_model(self):
         td.pandas()
         data = self.data
+        self.logger.debug("Combining texts...")
+        text = data.progress_apply(
+            lambda row: self.combine_text(row), axis=1)
+        self.logger.info("Combined texts..")
 
-        embeddings = data.progress_apply(
-            lambda row: self.embed_text(row), axis=1)
-        self.model = pd.DataFrame({'embedding': embeddings})
+        self.logger.debug("encoding corpus")
+
+        embeddings = self.sbert_model.encode(text, show_progress_bar=True)
+        print(embeddings)
+        self.logger.info("encoded documents")
+        self.model = embeddings
 
     def search(self, query, page):
         td.pandas()
@@ -87,10 +97,11 @@ class SBERT:
         start = (page - 1) * self.records_per_page
 
         query_embedding = self.sbert_model.encode(query)
+        query_embedding = query_embedding.numpy()
+        print(query_embedding.shape)
 
         self.data['embedding'] = self.model['embedding']
-        self.data['similarity'] = self.data['embedding'].progress_apply(
-            lambda x: self.find_similarity(x, query_embedding))
+        self.data['similarity'] = self.data['embedding']
         print(self.data.head())
 
     def find_similarity(self, doc_embedding, query_embedding):
@@ -103,15 +114,22 @@ class SBERT:
             self.logger.error(f"Exception thrown: {e}")
             return 0
 
-    def embed_text(self, row):
+    def combine_text(self, row):
         columns = ['title', 'author', 'research group', 'contributor', 'publication year',
                    'abstract', 'subject topic', 'publication type', 'programme']
         text = ''.join([str(row[col]) if not pd.isna(
             row[col]) else ' ' for col in columns])
-        return self.sbert_model.encode(text)
+        return text
 
     def save_model(self):
-        self.model.to_csv(self.model_name)
+        self.logger.debug(f"Saving model {self.model_name}...")
+        try:
+            with open(self.model_name, 'wb') as file:
+                pickle.dump(self.model, file)
+            self.logger.info(f"Saved model '{self.model_name}' successfully")
+        except Exception as e:
+            self.logger.error(
+                f"Failed to save model '{self.model_name}': {e}")
 
 
 if __name__ == '__main__':

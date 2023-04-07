@@ -1,3 +1,4 @@
+import json
 import os
 import pickle
 import backoff
@@ -9,16 +10,16 @@ from utils import CustomFormatter
 from dotenv import load_dotenv, find_dotenv
 from tqdm import tqdm as td
 from sentence_transformers import SentenceTransformer
-from rank_bm25 import BM25Okapi
+from rank_bm25 import BM25Okapi, BM25L, BM25Plus
 
 
 class BM25:
-    def __init__(self, model_name=f'BM25_model.pkl', data_name='data.csv', records_per_page=20):
-        load_dotenv(find_dotenv())
+    def __init__(self, model_name=f'model.pkl', data_name='data.csv', bm_type="Plus", records_per_page=20):
+        self.bm_type = bm_type
+        self.model_name = f"BM25{bm_type}{model_name}"
         self.init_logger()
         self.logger.debug(f"Initializing {__class__.__name__}...")
 
-        self.model_name = model_name
         self.data_name = data_name
         self.records_per_page = records_per_page
 
@@ -27,11 +28,24 @@ class BM25:
         self.logger.info(
             f"Amount of records shown per page: {self.records_per_page}")
 
-        self.model_exists = os.path.exists(model_name)
+        self.model_exists = os.path.exists(self.model_name)
         self.data_exists = os.path.exists(data_name)
 
         self.logger.info(f"Initialized {__class__.__name__}.")
         self.load_model()
+
+    def create_BM25(self, tokenized_corpus):
+        match self.bm_type:
+            case "Okapi":
+                self.model = BM25Okapi(tokenized_corpus)
+            case "L":
+                self.model = BM25L(tokenized_corpus)
+            case "Plus":
+                self.model = BM25Plus(tokenized_corpus)
+            case _:
+                self.logger.error(
+                    f"Bad input! - Wrong BM-model provided: `{self.bm_type}` can only use ['Okapi', 'L', 'Plus' ]")
+        self.logger.info(f"Created `BM{self.bm_type}` model!")
 
     def init_logger(self):
         self.logger = logging.getLogger(__class__.__name__)
@@ -73,35 +87,33 @@ class BM25:
             self.logger.info(f"Loaded {__class__.__name__} data.")
 
     def create_model(self):
+        self.logger.debug(f"Creating model...")
         td.pandas()
         data = self.data
-
         tokenized_corpus = data.progress_apply(
             lambda row: self.embed_text(row), axis=1)
-        self.model = BM25Okapi(tokenized_corpus)
+        self.create_BM25(tokenized_corpus)
+        self.logger.info(f"Created model.")
 
     def search(self, query, page):
         self.logger.debug(f"Searching for '{query}' on page {page}...")
 
-        td.pandas()
-
-        self.logger.debug(f"Searching for '{query}' on page {page}...")
-
+        query = query.lower()
         start = (page - 1) * self.records_per_page
 
         tokenized_query = query.split(" ")
-        print(self.model)
         doc_scores = self.model.get_scores(tokenized_query)
-        df = pd.DataFrame({'scores': doc_scores}).index
-        print(doc_scores)
-        self.logger.info("Search completed!")
+        df = pd.DataFrame({'scores': doc_scores})
+
         sorted_scores = df.sort_values(['scores'], ascending=[False])
         indexes = sorted_scores[start:start+20]
-        print(indexes)
+        print(indexes.index.values.tolist())
         res = []
-        for doc_index in indexes:
+        for doc_index in indexes.index.values:
             res.append(self.data.loc[doc_index])
-        return res.to_json(orient='records')
+        dataframe = pd.DataFrame(res)
+        self.logger.info("Search completed!")
+        return dataframe.to_json(orient='records')
 
     def embed_text(self, row):
         columns = ['title', 'author', 'research group', 'contributor', 'publication year',
@@ -124,4 +136,4 @@ class BM25:
 
 if __name__ == '__main__':
     bm25 = BM25()
-    print(bm25.search("what is info retrieval", 1))
+    print(bm25.search("what is info retrieva", 1))

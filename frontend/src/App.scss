@@ -97,3 +97,9 @@
     hsla(359, 87%, 48%, 1) 100%
   );
 }
+.modelBar {
+  .mantine-Radio-label {
+    font-weight: bold;
+    color: white;
+  }
+}

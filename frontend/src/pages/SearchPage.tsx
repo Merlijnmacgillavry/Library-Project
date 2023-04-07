@@ -5,6 +5,7 @@ import logo from '../assets/logo_tudelft.png';
 import SearchBar from '../components/SearchBar';
 import SearchResults from '../components/SearchResults';
 import Sidebar from '../components/Sidebar';
+import Modelbar from '../components/Modelbar';
 
 export default function SearchPage() {
     const theme = useMantineTheme()
@@ -34,19 +35,7 @@ export default function SearchPage() {
             asideOffsetBreakpoint="sm"
             navbar={
                 <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
-
-                    <Radio.Group
-                        name="favoriteFramework"
-                        label="Select the retrieval method to run"
-                        description="Ranking can be found at ..."
-                    >
-                        <Stack mt={'md'}>
-                            <Radio value="Basic" label="Basic" checked />
-                            <Radio value="TFIDF" label="TFIDF" />
-                            <Radio value="SBERT" label="SBERT" />
-                            <Radio value="BM25" label="BM25" />
-                        </Stack>
-                    </Radio.Group>
+                    <Modelbar />
                 </Navbar>
             }
             aside={

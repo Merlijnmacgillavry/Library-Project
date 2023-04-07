@@ -11,7 +11,7 @@ import pickle
 
 
 class TFIDF:
-    def __init__(self, model_name='model.pkl', data_name='data.csv', records_per_page=20):
+    def __init__(self, model_name='TFIDFmodel.pkl', data_name='data.csv', records_per_page=20):
         self.init_logger()
         self.logger.debug("Initializing TFIDF...")
 
@@ -106,6 +106,8 @@ class TFIDF:
         self.logger.debug(f"Searching for '{query}' on page {page}...")
         start = (page - 1) * self.records_per_page
         end = start + self.records_per_page
+
+        query = query.lower()
 
         query_tfidf = self.model.transform([query])
 
