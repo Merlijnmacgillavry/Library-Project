@@ -14,7 +14,7 @@ export default function SearchResultCard(props: SearchResultCard) {
                 <div className='content'>
                     <Title order={5} color={theme.colors.primary[0]}>{data?.title}</Title>
                     <Text fz={'12px'} fw={'normal'} >{data?.author} (author)</Text>
-                    <Text lineClamp={3}>{data?.abstract}</Text>
+                    <Text lineClamp={5}>{data?.abstract}</Text>
                     <Text>{data?.['publication type']}</Text>
                 </div>
             </div>

@@ -31,6 +31,9 @@ class SBERT:
 
         self.sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
 
+        self.logger.debug(f"Initializing Vdb...")
+        self.logger.info(f"Initialized.")
+
         self.logger.info(f"Initialized {__class__.__name__}.")
         self.load_model()
 
@@ -68,7 +71,7 @@ class SBERT:
             self.logger.debug(f"Loading model '{self.model_name}'!")
             with open(self.model_name, 'rb') as file:
                 self.model = pickle.load(file)
-            self.model = self.model.numpy()
+            self.model = self.model
             self.logger.info(f"Loaded {__class__.__name__} model.")
             self.logger.debug(f"Loading data '{self.data_name}'!")
             self.data = pd.read_csv(self.data_name)
@@ -95,14 +98,30 @@ class SBERT:
         self.logger.debug(f"Searching for '{query}' on page {page}...")
 
         start = (page - 1) * self.records_per_page
+        end = start + self.records_per_page
+
+        query = query.lower()
 
         query_embedding = self.sbert_model.encode(query)
-        query_embedding = query_embedding.numpy()
-        print(query_embedding.shape)
 
-        self.data['embedding'] = self.model['embedding']
-        self.data['similarity'] = self.data['embedding']
-        print(self.data.head())
+        print(query_embedding.shape)  # =(384, )
+        print(self.model[0].shape)  # =(40841, 384)
+
+        dot_products = np.dot(self.model, query_embedding)
+
+        similarity_scores = sorted(list(
+            enumerate(dot_products)), key=lambda x: x[1], reverse=True)
+
+        result = pd.DataFrame(columns=self.data.columns)
+
+        for i in range(start, end):
+            doc_index = similarity_scores[i][0]
+            result.loc[doc_index] = self.data.iloc[doc_index]
+            # self.logger.info(
+            #     f"Document #{doc_index}: {self.dataframe.iloc[doc_index]['title']} - Similarity Score: {similarity_scores[i][1]}")
+
+        self.logger.info("Search completed!")
+        return result.to_json(orient='records')
 
     def find_similarity(self, doc_embedding, query_embedding):
         doc_embedding = np.fromstring(doc_embedding).reshape((1, -1))
@@ -134,4 +153,4 @@ class SBERT:
 
 if __name__ == '__main__':
     sbert = SBERT()
-    sbert.search("what is info retrieval", 1)
+    print(sbert.search("what is info retrieval", 1))

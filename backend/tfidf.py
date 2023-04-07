@@ -57,9 +57,6 @@ class TFIDF:
             if not self.model_exists:
                 self.logger.warning(
                     f"Model '{self.model_name}' does not exist")
-            if not self.data_exists:
-                self.logger.warning(
-                    f"Data'{self.data_name}' does not exist")
             self.create_model()
             self.save_model()
         else:
