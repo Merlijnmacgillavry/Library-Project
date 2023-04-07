@@ -60,3 +60,40 @@
     }
   }
 }
+.sidebar {
+  &-filter {
+    .filterChoice {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.header {
+  background: hsla(21, 33%, 63%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(21, 33%, 63%, 1) 0%,
+    hsla(196, 32%, 47%, 1) 36%,
+    hsla(196, 32%, 47%, 1) 51%,
+    hsla(359, 87%, 48%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(21, 33%, 63%, 1) 0%,
+    hsla(196, 32%, 47%, 1) 36%,
+    hsla(196, 32%, 47%, 1) 51%,
+    hsla(359, 87%, 48%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(21, 33%, 63%, 1) 0%,
+    hsla(196, 32%, 47%, 1) 36%,
+    hsla(196, 32%, 47%, 1) 51%,
+    hsla(359, 87%, 48%, 1) 100%
+  );
+}

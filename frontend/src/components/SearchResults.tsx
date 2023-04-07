@@ -1,20 +1,28 @@
-import React, { useContext, useState } from 'react'
-import { Card, Pagination, Stack } from '@mantine/core';
+import React, { useContext, useEffect, useState } from 'react'
+import { Card, LoadingOverlay, Pagination, Stack, useMantineTheme } from '@mantine/core';
 import { SearchContext } from '../providers/SearchProvider';
 import SearchResultCard from './SearchResultCard';
 
 export default function SearchResults() {
-  const { changePage, results } = useContext(SearchContext)
+  const theme = useMantineTheme()
 
+  const { changePage, results, loading } = useContext(SearchContext)
   const [activePage, setPage] = useState(1);
+
+
   //   return <Pagination value={activePage} onChange={setPage} total={10} />;
   return (
-    <Stack>
-      {results.map((data: SearchResultT, i: number) => {
-        return <SearchResultCard key={i} data={data} />
-      })}
+    <>
+      <LoadingOverlay loaderProps={{ size: 'md', color: theme.colors.primary[0], variant: 'oval' }}
+        overlayOpacity={0.3}
+        overlayBlur={2}
+        visible={loading} />
+      <Stack>
+        {results.map((data: SearchResultT, i: number) => {
+          return <SearchResultCard key={i} data={data} />
+        })}
 
-    </Stack>
+      </Stack></>
   )
 }
 

@@ -11,28 +11,23 @@ import pickle
 
 
 class TFIDF:
-    def __init__(self, data_folder='data', model_name='model.pkl', dataframe_name='data.csv', records_per_page=20):
+    def __init__(self, model_name='model.pkl', data_name='data.csv', records_per_page=20):
         self.init_logger()
         self.logger.debug("Initializing TFIDF...")
-        self.data_folder = data_folder
+
         self.model_name = model_name
-        self.dataframe_name = dataframe_name
+        self.data_name = data_name
         self.records_per_page = records_per_page
-        self.logger.info(f"Data folder: '{self.data_folder}'")
+
         self.logger.info(f"Model name: '{self.model_name}'")
-        self.logger.info(f"Dataframe name: '{self.dataframe_name}'")
+        self.logger.info(f"Data name: '{self.data_name}'")
         self.logger.info(
             f"Amount of records shown per page: {self.records_per_page}")
 
-        self.file_size, self.amount_files = size_and_amount_files(
-            folder=data_folder)
-        self.logger.info(
-            f"Total data size is { convert_size(self.file_size)} , amount of files is {self.amount_files}")
-
         self.model_exists = os.path.exists(model_name)
-        self.data_exists = os.path.exists(dataframe_name)
+        self.data_exists = os.path.exists(data_name)
         self.model_matrix = None
-        self.logger.info("Initialized TFIDF.")
+        self.logger.info(f"Initialized {__class__.__name__}.")
         self.load_model()
 
     def init_logger(self):
@@ -48,11 +43,15 @@ class TFIDF:
         self.logger.addHandler(file_handler)
 
     def load_model(self):
-        self.logger.debug("Loading TFIDF model...")
+        self.logger.debug(f"Loading {__class__.__name__} model...")
         if (not self.data_exists):
             self.logger.error(
-                f"Failed to load data! - File '{self.dataframe_name}' does not exist!")
+                f"Failed to load data! - File '{self.data_name}' does not exist!")
             return
+
+        self.logger.debug(f"Loading data '{self.data_name}'!")
+        self.data = pd.read_csv(self.data_name)
+        self.logger.info("Loaded TFIDF data.")
 
         if ((not self.model_exists)):
             if not self.model_exists:
@@ -60,26 +59,19 @@ class TFIDF:
                     f"Model '{self.model_name}' does not exist")
             if not self.data_exists:
                 self.logger.warning(
-                    f"Dataframe '{self.dataframe_name}' does not exist")
+                    f"Data'{self.data_name}' does not exist")
             self.create_model()
             self.save_model()
-            self.save_dataframe()
         else:
             self.logger.debug(f"Loading model '{self.model_name}'!")
             with open(self.model_name, 'rb') as file:
                 self.model = pickle.load(file)
             self.logger.info("Loaded TFIDF model.")
 
-            self.logger.debug(f"Loading dataframe '{self.dataframe_name}'!")
-
-            self.dataframe = pd.read_csv(self.dataframe_name)
-
-            self.logger.info("Loaded TFIDF dataframe.")
-
         self.logger.debug(f"Loading model matrix...")
         columns = ['title', 'author', 'research group', 'contributor', 'publication year',
                    'abstract', 'subject topic', 'publication type', 'programme']
-        self.model_matrix = self.model.transform(self.dataframe[columns].apply(
+        self.model_matrix = self.model.transform(self.data[columns].apply(
             lambda x: ' '.join(x.dropna().astype(str)), axis=1))
         self.logger.info(f"Model matrix loaded!")
 
@@ -94,9 +86,8 @@ class TFIDF:
 
         self.logger.debug(f"Loading columns:\n{columns}")
 
-        self.dataframe = df
         # Create a sparse matrix of the TF-IDF values
-        self.model = tfidf.fit(df[columns].apply(
+        self.model = tfidf.fit(self.data[columns].apply(
             lambda x: ' '.join(x.fillna("").astype(str)), axis=1))
 
         self.logger.info(f"Created model.")
@@ -112,6 +103,7 @@ class TFIDF:
                 f"Failed to save model '{self.model_name}': {e}")
 
     def search(self, query, page):
+        self.logger.debug(f"Searching for '{query}' on page {page}...")
         start = (page - 1) * self.records_per_page
         end = start + self.records_per_page
 
@@ -123,10 +115,11 @@ class TFIDF:
         similarity_scores = sorted(
             list(enumerate(cosine_similarities)), key=lambda x: x[1], reverse=True)
 
-        result = pd.DataFrame(columns=self.dataframe.columns)
+        result = pd.DataFrame(columns=self.data.columns)
+
         for i in range(start, end):
             doc_index = similarity_scores[i][0]
-            result.loc[doc_index] = self.dataframe.iloc[doc_index]
+            result.loc[doc_index] = self.data.iloc[doc_index]
             # self.logger.info(
             #     f"Document #{doc_index}: {self.dataframe.iloc[doc_index]['title']} - Similarity Score: {similarity_scores[i][1]}")
 

@@ -2,7 +2,7 @@ from flask import Flask, make_response, jsonify, request
 from flask import render_template
 from flask_cors import CORS, cross_origin
 from tfidf import TFIDF
-
+import time
 
 app = Flask("Library Project Backend")
 cors = CORS(app)
@@ -26,6 +26,7 @@ def healthCheck():
 
 @app.route('/search', methods=['GET'])
 def search():
+    time.sleep(2)
     page = request.args.get('page', default=1, type=int)
     query = request.args.get('query')
     return tfidf.search(query, page)
