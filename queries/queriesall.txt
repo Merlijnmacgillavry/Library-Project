@@ -1,0 +1,471 @@
+Fundamentals of Computer Graphics Marschner Shirley
+Probability and Stochastic Processes: A Friendly Introduction for Electrical and Computer Engineers
+Fundamentals of Computer Graphics
+Python for Data Analysis
+python
+Crash course in Python
+pattern recognition
+effective software testing
+deep learning python
+linear algebra and its applications
+linear algebra
+calculus
+deep learning
+IEEE
+a pattern language
+Learn Python 3 the hard way
+Modeling-and-Analysis-of-Communicating-Systems
+pattern recognition and machine learning
+Linear Algebra and its Applications
+reinforcement learning
+fundamentals of computer graphics
+Learn PowerShell
+artificial intelligence
+C
+dictionary
+Pattern Recognition and Machine Learning
+advanced deep learning in python
+c
+artificial intelligence a modern approach
+introduction to algorithms
+Computer Science: An Overview
+calculus a complete course
+Effective Software Testing
+algorithm design
+arduino
+the c programming language
+rust
+ti:Fundamentals of Computer Graphics Marschner Shirley
+deep learning with python
+Fundamentals of Computer Graphics, 4th Edition, Steve Marschner and Peter Shirley, CRC Press
+game theory
+pattern recognition and machine learning bishop
+Digital Image Processing
+java
+the art of game design
+calculus early transcendentals
+digital design and computer architecture
+signal processing
+Algorithm Design
+algorithms
+C programming
+computer vision
+digital image processing
+The Practice of System and Network Administration Volume 1: DevOps and other Best Practices for Enterprise IT
+Deep learning
+Digital signal processing, principle, algorithms and applications
+Introduction to Machine Learning
+machine learning python
+Python
+think python
+A Modern Introduction to Probability and Statistics
+computer graphics
+digital image processing gonzalez
+fluent python
+introduction to machine learning
+linear algebra and its applications lay
+python for data analysis
+Signals and systems
+sustainable architecture
+Calculus
+Data Communications Networking
+data structures and algorithms in java
+digital signal processing
+Effective software testing
+hands-on machine learning
+linux
+machine learning refined
+Neural networks and deep learning
+Performance Analysis of Complex Networks and Systems
+scala reactive programming
+The Coding Manual for Qualitative Researchers
+a first course in machine learning
+cmos layout
+digital fabrication
+fundamentals of computer graphics shirley
+Introduction to algorithms
+Machine learning
+Machine Learning, A Bayesian and Optimization Perspective
+monolithic architecture
+multiagent systems
+peter eisenman
+Probability and Stochastic Processes: A Friendly Introduction for Electrical and Computer Engineers", 3rd Edition
+Safety, Security and Privacy for Cyber-Physical System
+artificial AND intelligence
+clean code
+Computer Arithmetic: Algorithms and Hardware Designs
+computer networks
+Detection of Attacks in Cyber-Physical Systems: Theory and Applications
+Digital Design and Computer Architecture
+Machine Learning Refined
+neural network
+Python GUI
+quantum computing
+Systems design and engineering: facilitating multidisciplinary development projects.
+Agent-Based Modelling of Socio-Technical Systems
+Advanced deep learning in python
+c programming language
+computer controlled systems
+Core Java Volume I
+digital watermarking
+Effective Software Testing: A Developer's Guide
+Fundamentals of Computer Graphics, 4th Edition
+how linux works
+Machine Learning Refined: Foundations, Algorithms, and Applications
+Pattern Recognition and Machine Learning bishop
+Programmable Logic Controller
+Signal Processing First
+Signals and Systems
+think Python
+a tour of c
+c programming
+Computer networks
+cryptography made simple
+deep learning goodfellow
+Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow
+introduction to computer organization
+Network Security in Theory and Practice
+neural networks
+Programming the Finite Element Method
+refactoring
+software architecture
+software testing
+Software update: the ORCA program system, version 4.0
+ti:fundamentals of digital image processing
+ti= Artificial intelligence
+AI
+Agent-based modelling of socio-technical systems
+algorithms to live by
+architects data
+Artificial intelligence
+Computer aided design architecture
+computer organisation
+data mining
+data self service architecture
+Data-Driven Identification of Networks of Dynamic Systems
+introduction python
+introduction to statistical learning
+Principles of Object Oriented Modeling and Simulation with Modelica
+Probability and Stochastic Processes: A Friendly Introduction for Electrical and Computer Engineer
+programming c
+python crash course
+reinforcement learning an introduction
+Reinforcement Learning and Stochastic Optimization
+set theory
+software development
+signal processing first
+the linux programming interface
+the practice of programming
+The practice of system and network engineering
+Verification and Validation in Computational Science and Engineering
+visual computing for medicine
+a tour of C
+agent based modeling
+Autofocusing in computer microscopy: Selecting the optimal focus algorithm
+C primer
+computer architecture
+Computer Controlled Systems
+computer organization and embedded systems
+computer vision algorithms and applications
+Computer Animation and Simulation 2000
+cryptography
+data assimilation
+data management
+database
+Deep Learning
+Designing data-intensive applications Kleppmann
+Digital and Analog Communication Systems
+Fundamentals of Database Systems
+Fundamentals of Software Architecture
+game design
+gamification
+Hands-On-GPU-Programming-with-Python-and-CUDA
+Introduction to Algorithms
+introduction to information retrieval
+Introduction to nonlinear optimization: Theory, algorithms, and applications with MATLAB
+machine learning architecture in the age of artificial intelligence
+machine learning bayesian
+machine learning in business
+Machine Learning Refined, Foundations, Algorithms, and Applications
+Managing Digital Innovation: A Knowledge Perspective
+nonlinear programming
+parallel programming
+Programming
+programming in haskell
+programming in haskell graham hutton
+Protecting intellectual property of deep neural networks with watermarking
+raspberry pi
+refactoring improving the design of existing code
+Reinforcement learning
+reinforcement learning sutton
+Recommended Practice for Code Verification in Computational Fluid Dynamics
+software engineering
+sql
+stochastic programming
+The architectural pattern book
+unix
+Visual Computing for Medicine (2nd Edition): Theory, Algorithms, and Applications
+"cyber-physical systems"
+A first course in machine learning, 2nd edition
+ab:(Customer Contact Center) AND ab:(Machine learning)
+ab:(Customer Service) AND ab:(Machine learning) AND ab:(classification)
+abaqus python
+Advanced deep learning with Python
+Algorithms
+Algorithms for Reinforcement Learning
+artificial intelligence architecture
+artificial neural networks
+Calculus, Early Transcendentals: Pearson New International Edition
+computer design and architecture
+computer arithmetic behrooz parhami
+computer
+computer organisation and embedded systems
+cyber security machine learning
+data science
+Data Structures And Algorithms In Java
+Data-Driven Science and Engineering: Machine Learning, Dynamical Systems, and Control
+Game theory
+hands on machine learning with scikit learn and tensorflow concepts tools and techniques to build intelligent systems
+hard real time computing systems
+How to Measure Anything in Cybersecurity Risk Cybersecurity
+image processing
+introduction to digital systems
+introduction to java programming and data structures
+javascript
+Julia programming
+kubernetes
+Machine Learning Refined, Foundations, Algorithms, and Applications” by Jeremy Watt, Reza Borhani, and Aggelos K. Katsaggelos, Cambridge University Press
+metaverse
+Multiagent Systems
+natural language processing
+nft
+nonlinear systems
+nonlinear systems khalil
+open data
+operating systems
+parallel computing
+probabilistic machine learning
+Probabilistic Machine Learning: An Introduction
+programming
+Programming_the_Finite_Element_Method
+python beginner
+python machine learning
+python object oriented programming
+Reinforcement Learning: An Introduction
+Reinforcement Learning and Optimal Control
+Rust
+rust in action
+scala
+Software Architecture Patterns for Serverless systems
+software development, design and coding
+statistical learning
+System Innovation and the Transition to Sustainability
+systems theory
+the art of computer programming
+The Finite Element Method
+the finite element method linear static and dynamic finite element analysis
+The Finite Element Method: Its Basis and Fundamentals
+the unix programming environment
+ti:C
+ti:Introduction to Nonlinear Finite Element Analysis
+unix and linux system administration
+vector calculus
+"c "
+"shared decision making" -code -algorithm -software -math -autonom children
+advanced deep learning with python
+algorithm
+algorithm design manual
+algorithmic trading
+Algorithms to Live By: The Computer Science of Human Decisions
+An Analysis of the Finite Element Method
+An analysis of the finite element method
+An application of cluster analysis to the problem of locating items within a warehouse
+an introduction to statistical learning
+An introduction to statistical learning
+An Introduction to Statistical Learning
+An Introduction to the Finite Element Method
+Analysis of Pile Foundations Subject to Static and Dynamic Loading
+Artificial Intelligence and Architecture: From Research to Practice
+artificial intelligence in transportation
+Artificial Intelligence Techniques in Design Optimization of Variable Stiffness Cylindrical Shells
+blockchain
+c primer plus
+C Standard Template Library in Practice
+clustering python
+cmake
+Collaborative Aspects of Open Data in Software Engineering
+computational structure optimization
+Computer Architecture: A Quantitative Approach
+Computer Graphics
+computer networks tanenbaum
+Computer Systems: A Programmer's Perspective
+Computer Vision: Algorithms and Applications
+ewi
+Analog Integrated Circuit Design
+faculty:"Electrical Engineering, Mathematics and Computer Science"
+cyber security
+Fundamentals of Computer Graphics 4th
+Fundamentals of Computer Graphics Shirley
+human computer interaction
+Introduction to the Theory of Computation
+introduction to the theory of computation
+java 17
+Java
+JavaScript
+kf:(machine learning) AND (kf:(stacking) OR kf:(blending) OR kf:(stacked generalization))
+linear regression
+lineaire algebra
+Linear algebra and its applications
+Linear Algebra and Its Applications
+linear algebra and optimization for machine learning
+machine learning and pattern recognition
+Midgar: Detection of people through computer vision in the Internet of Things scenarios to improve the security in Smart Cities, Smart Towns, and Smart Homes
+python computer program language
+python for dummies
+Ray Tracing from the Ground Up by Kevin Suffern
+Simulation and the Monte-Carlo method
+software design
+Software Engineering at Google: Lessons Learned from Programming Over Time
+AD
+agent based modelling
+agent based modelling of socio technical systems
+AI and machine learning
+Algorithm design
+algorithmic game theory
+algorithms and data structures
+Algorithms for Optimization
+algorithms meshing
+analog to digital conversion
+Analog-to-Digital Conversion
+audio source separation and speech enhancement
+blended learning
+black hat python
+bivariate correlation
+C Concurrency in Action
+c language
+c primer
+calculus: a complete course
+Calculus, A Complete Course,
+calculus metric version
+Calculus: Early transcendentals
+calculus james stewart
+Can digital data diagnose mental health problems? A sociological exploration of ‘digital phenotyping’
+Clean Code
+COMPINT 85 : computer aided technologies
+Complex Variables and Applications
+Complexity: A Guided Tour
+Computation of Full-Vector Modes for Bending Waveguide Using Cylindrical PerfectlyMatched Layers
+computational imaging
+Computational Ethics
+Computational Geometry: Algorithms and Applications
+Computer science
+Computer Science
+Computer vision: algorithms and applications
+computer-controlled systems
+computers and graphics
+computers and geotechnics
+control system
+cyber security in the maritime sector
+Cybernetics and Systems 2000
+data center
+Data Analysis Using Regression and Multilevel/Hierarchical Models
+data center architecture
+data communications and networking
+data communications networking
+Data companion
+data encrypt python
+data in personalized healthcare
+data markets
+data mesh
+data mining aggarwal
+data mining textbook
+Data science
+data science python
+data structures and algorithms
+data structures and algorithms in python
+data validation
+data visualization
+Data-Driven Chance Constrained Programs over Wasserstein Balls
+decentralisation
+decision making architectural design
+Deep Learning Techniques for Biomedical and Health Informatics 2020
+Deep Maps and Spatial Narratives
+deep reinforcement learning
+Delftse foundation of computation
+delftse foundations of computation
+Design and Analysis of Machine Learning experiments
+design data intensive
+Determination of the appropriate parameters for K-means clustering using selection of region clusters based on density DBSCAN (SRCD-DBSCAN)
+Developing playable metagames for participatory stakeholder analysis
+devops
+DevOps and other Best Practices for Enterprise IT
+Digital design and computer architecture
+Digital Image Processing gonzalez
+Digital integrated circuits : a design perspective.
+Digital media
+Digital signal processing
+digital systems
+Distributed systems
+dive into deep learning
+Do You Trust Me? Value and Governance in Data Sharing Business Models
+docker
+Dynamic data assimilation: a least squares approach
+Dynamic mode decomposition: data-driven modeling of complex systems
+dynamic programming
+effective c
+eisenman
+eisenman peter
+embedded system
+Embedded software primer
+embedded systems
+Embedded Radar Sensing in Communication Waveforms: Algorithms and Trade-off
+Evaluation of machine learning algorithms for prediction of regions of high Reynolds averaged Navier Stokes uncertainty
+evolutionary algorithms
+explainable AI
+Explainable AI in Deep Reinforcement Learning Models for Power System Emergency Control
+exploratory data analysis
+Foundations of Computation
+functional programming
+Fundamentals of Computer Graphic
+game theory ferguson
+Game theory’s role in role-playing
+Graph Algorithms in the Language of Linear Algebra
+gpu
+hands on machine learning with scikit
+hands on machine learning with scikit learn and tensorflow
+Hands-On Machine Learning with Scikit-Learn and TensorFlow
+head first java
+Human-Computer Interaction: Design Issues, Solutions, and Applications
+Interacting with Computers
+Interpretable AND "Inverse Reinforcement Learning"
+Introduction to Digital Systems
+Introduction to High Performance Scientific Computing
+Introduction to Linear and Nonlinear Programming
+introduction to software testing
+Introduction to the Theory of Computation Sipser
+iot green transition
+iot security
+it
+javafx
+kf:("continuous improvement") AND kf:("quality management") AND kf:("machine learning")
+Knowledge Representation: Logical, Philosophical, and Computational Foundations
+Knowledge sharing
+kw:(error correction) AND kw:(cryptography) AND kw:(quantum computing)
+kw:(Fundamentals of Computer Graphics Marschner Shirley)
+kw:(game- based learning)
+learn python the hard way
+learning SPARQL
+learning with kernels
+Linear Algebra and Learning from Data
+linux command line
+linux programming interface
+Machine Learning
+Machine Learning Algorithms
+machine learning bayesian perspective
+machine learning bishop
+machine learning cycle
+Machine Learning in Business, an introduction to the world of data science
+Machine Learning Refined, Foundations, Algorithms, and Applications” by Jeremy Watt, Reza Borhani, and Aggelos K. Katsaggelos, Cambridge University Press; 2nd edition; 2020; ISBN: 9781108480727.
+machine learning with python
+Machine Learning with PyTorch and Scikit-Learn: Develop machine learning and deep learning models with Python
+machine learning a probabilistic perspective

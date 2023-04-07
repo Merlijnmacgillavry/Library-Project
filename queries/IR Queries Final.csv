@@ -1,0 +1,291 @@
+Query,#Documents retrieved
+"""c""",20673
+it,20053
+Computer Science,7477
+algorithm,2742
+Data science,2740
+software engineering,2499
+control system,2188
+data management,1888
+Algorithms,1616
+software design,1112
+sustainable architecture,1074
+Machine Learning,1046
+effective c,960
+Computer networks,917
+Algorithm design,779
+software development,743
+Programming,741
+data validation,733
+The Finite Element Method,663
+open data,661
+computer architecture,622
+neural network,596
+systems theory,591
+Deep learning,587
+database,567
+neural networks,557
+embedded systems,514
+operating systems,472
+Distributed systems,468
+set theory,433
+embedded system,422
+Python,373
+An analysis of the finite element method,360
+digital systems,340
+data center,332
+Signals and systems,325
+Algorithms for Optimization,313
+software testing,302
+c language,301
+computer vision,301
+C programming,296
+programming c,296
+game design,295
+artificial AND intelligence,291
+Artificial intelligence,291
+Machine Learning Algorithms,272
+software architecture,263
+computer design and architecture,249
+signal processing,239
+AI,238
+Reinforcement learning,231
+image processing,229
+nonlinear systems,217
+linear regression,215
+Neural networks and deep learning,212
+blockchain,175
+data visualization,171
+data mining,170
+cyber security,167
+Computer Graphics,155
+agent based modelling,152
+Java,143
+artificial neural networks,139
+data markets,136
+human computer interaction,121
+agent based modeling,114
+exploratory data analysis,113
+gpu,113
+dynamic programming,106
+Simulation and the Monte-Carlo method,101
+quantum computing,100
+data mesh,99
+statistical learning,96
+Game theory,94
+deep reinforcement learning,93
+design data intensive,92
+Digital media,90
+c programming language,83
+the c programming language,83
+Python for Data Analysis,78
+Computer Controlled Systems,77
+computer controlled systems,77
+computer-controlled systems,77
+natural language processing,77
+parallel computing,71
+Algorithms for Reinforcement Learning,69
+gamification,69
+a pattern language,65
+AI and machine learning,63
+cryptography,63
+computational structure optimization,61
+evolutionary algorithms,60
+signal processing first,58
+algorithms and data structures,57
+data structures and algorithms,57
+data assimilation,54
+the practice of programming,52
+iot security,50
+data science python,49
+parallel programming,49
+Digital design and computer architecture,44
+arduino,43
+The practice of system and network engineering,43
+computational imaging,42
+Digital signal processing,40
+JavaScript,40
+Reinforcement Learning and Optimal Control,40
+data center architecture,39
+machine learning in business,38
+cyber security machine learning,37
+functional programming,37
+machine learning and pattern recognition,36
+Pattern Recognition and Machine Learning,36
+digital image processing,35
+architects data,34
+artificial intelligence architecture,34
+linux,34
+Rust,34
+java 17,33
+machine learning python,32
+python machine learning,32
+Computer Architecture: A Quantitative Approach,30
+machine learning bayesian,30
+stochastic programming,30
+algorithm design manual,29
+machine learning with python,29
+Complex Variables and Applications,28
+computer organisation,28
+raspberry pi,28
+Effective Software Testing,27
+sql,26
+the art of computer programming,26
+nonlinear programming,25
+scala,24
+"""cyber-physical systems""",22
+explainable AI,22
+System Innovation and the Transition to Sustainability,22
+analog to digital conversion,20
+Analog-to-Digital Conversion,20
+decision making architectural design,20
+Digital integrated circuits : a design perspective,20
+probabilistic machine learning,20
+machine learning cycle,19
+Programming the Finite Element Method,17
+refactoring,17
+monolithic architecture,16
+a tour of C,15
+agent based modelling of socio technical systems,14
+Agent-based modelling of socio-technical systems,14
+Performance Analysis of Complex Networks and Systems,14
+computer vision algorithms and applications,13
+algorithms to live by,12
+Clean Code,12
+docker,12
+kubernetes,12
+programming in haskell,12
+the art of game design,12
+abaqus python,11
+devops,11
+Design and Analysis of Machine Learning experiments,10
+introduction python,10
+Computer aided design architecture,9
+data in personalized healthcare,9
+"software development, design and coding",9
+clustering python,7
+Data companion,7
+deep learning python,6
+deep learning with python,6
+Dynamic data assimilation: a least squares approach,6
+Julia programming,6
+learning with kernels,6
+metaverse,6
+Python GUI,6
+artificial intelligence in transportation,5
+bivariate correlation,5
+Foundations of Computation,5
+machine learning refined,5
+nft,5
+Programmable Logic Controller,5
+blended learning,4
+data self service architecture,4
+dive into deep learning,4
+fluent python,4
+peter eisenman,4
+python object oriented programming,4
+Reinforcement Learning and Stochastic Optimization,4
+unix,4
+algorithmic trading,3
+artificial intelligence a modern approach,3
+computers and graphics,3
+data communications and networking,3
+Data Communications Networking,3
+Digital and Analog Communication Systems,3
+Interacting with Computers,3
+Complexity: A Guided Tour,2
+javafx,2
+Modeling-and-Analysis-of-Communicating-Systems,2
+Multiagent Systems,2
+Network Security in Theory and Practice,2
+algorithmic game theory,1
+algorithms meshing,1
+cyber security in the maritime sector,1
+data structures and algorithms in python,1
+hard real time computing systems,1
+Linear Algebra and Learning from Data,1
+machine learning a probabilistic perspective,1
+Machine Learning A Bayesian and Optimization Perspective,1
+python computer program language,1
+scala reactive programming,1
+The architectural pattern book,1
+The Coding Manual for Qualitative Researchers,1
+the unix programming environment,1
+think Python,1
+Verification and Validation in Computational Science and Engineering,1
+"""shared decision making"" -code -algorithm -software -math -autonom children",0
+ab:(Customer Contact Center) AND ab:(Machine learning),0
+ab:(Customer Service) AND ab:(Machine learning) AND ab:(classification),0
+Advanced deep learning in python,0
+Advanced deep learning with Python,0
+An application of cluster analysis to the problem of locating items within a warehouse,0
+Analysis of Pile Foundations Subject to Static and Dynamic Loading,0
+Artificial Intelligence Techniques in Design Optimization of Variable Stiffness Cylindrical Shells,0
+audio source separation and speech enhancement,0
+Autofocusing in computer microscopy: Selecting the optimal focus algorithm,0
+black hat python,0
+C Concurrency in Action,0
+C Standard Template Library in Practice,0
+Can digital data diagnose mental health problems? A sociological exploration of 'digital phenotyping',0
+cmake,0
+Collaborative Aspects of Open Data in Software Engineering,0
+COMPINT 85 : computer aided technologies,0
+Computation of Full-Vector Modes for Bending Waveguide Using Cylindrical Perfectly Matched Layers,0
+Computational Ethics,0
+Computational Geometry: Algorithms and Applications,0
+Computer Arithmetic: Algorithms and Hardware Designs,0
+computers and geotechnics,0
+Crash course in Python,0
+Data Analysis Using Regression and Multilevel/Hierarchical Models,0
+data encrypt python,0
+Data Structures And Algorithms In Java,0
+Data-Driven Chance Constrained Programs over Wasserstein Balls,0
+Data-Driven Identification of Networks of Dynamic Systems,0
+"Data-Driven Science and Engineering: Machine Learning, Dynamical Systems, and Control",0
+Deep Maps and Spatial Narratives,0
+Delftse foundation of computation,0
+Delftse foundations of computation,0
+Detection of Attacks in Cyber-Physical Systems: Theory and Applications,0
+Determination of the appropriate parameters for K-means clustering using selection of region clusters based on density DBSCAN (SRCD-DBSCAN),0
+Developing playable metagames for participatory stakeholder analysis,0
+DevOps and other Best Practices for Enterprise IT,0
+Do You Trust Me? Value and Governance in Data Sharing Business Models,0
+Dynamic mode decomposition: data-driven modeling of complex systems,0
+Embedded Radar Sensing in Communication Waveforms: Algorithms and Trade-off,0
+Evaluation of machine learning algorithms for prediction of regions of high Reynolds averaged Navier Stokes uncertainty,0
+Explainable AI in Deep Reinforcement Learning Models for Power System Emergency Control,0
+Game theory's role in role-playing,0
+Graph Algorithms in the Language of Linear Algebra,0
+how linux works,0
+How to Measure Anything in Cybersecurity Risk Cybersecurity,0
+"Interpretable AND ""Inverse Reinforcement Learning""",0
+iot green transition,0
+"kf:(""continuous improvement"") AND kf:(""quality management"") AND kf:(""machine learning"")",0
+kf:(machine learning) AND (kf:(stacking) OR kf:(blending) OR kf:(stacked generalization)),0
+"Knowledge Representation: Logical, Philosophical, and Computational Foundations",0
+kw:(error correction) AND kw:(cryptography) AND kw:(quantum computing),0
+kw:(game- based learning),0
+Learn PowerShell,0
+Learn Python 3 the hard way,0
+learn python the hard way,0
+learning SPARQL,0
+linear algebra and optimization for machine learning,0
+linux command line,0
+linux programming interface,0
+machine learning architecture in the age of artificial intelligence,0
+Machine Learning with PyTorch and Scikit-Learn: Develop machine learning and deep learning models with Python,0
+"Midgar: Detection of people through computer vision in the Internet of Things scenarios to improve the security in Smart Cities, Smart Towns, and Smart Homes",0
+Principles of Object Oriented Modeling and Simulation with Modelica,0
+Protecting intellectual property of deep neural networks with watermarking,0
+Recommended Practice for Code Verification in Computational Fluid Dynamics,0
+refactoring improving the design of existing code,0
+rust in action,0
+"Safety, Security and Privacy for Cyber-Physical System",0
+Software Architecture Patterns for Serverless systems,0
+Software Engineering at Google: Lessons Learned from Programming Over Time,0
+Systems design and engineering: facilitating multidisciplinary development projects,0
+the linux programming interface,0
+ti:C,0
+ti= Artificial intelligence,0
+unix and linux system administration,0
+visual computing for medicine,0
