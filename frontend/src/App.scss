@@ -103,3 +103,13 @@
     color: white;
   }
 }
+.stickyContainer {
+  background-color: #141517;
+  padding: 1em 0;
+  width: 100%;
+}
+.sticky {
+  position: sticky;
+  z-index: 3;
+  top: 80px;
+}

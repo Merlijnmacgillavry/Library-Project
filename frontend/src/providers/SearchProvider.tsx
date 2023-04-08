@@ -80,6 +80,15 @@ export default function SearchProvider(props: any) {
 
   }
 
+  function getProfile(uuid: string): SearchResult | void {
+    if (results.length > 0) {
+      const found_results = results.filter(res => res.uuid === uuid)
+      if (found_results.length > 0) {
+        return found_results[0]
+      }
+    }
+  }
+
   function changeModel(model: string): void {
     setLoading(true)
     if (lastQuery !== "") {
@@ -103,7 +112,7 @@ export default function SearchProvider(props: any) {
   }
 
   return (
-    <SearchContext.Provider value={{ search, results, lastQuery, changePage, loading, models, changeModel, currentModel }}>{props.children}</SearchContext.Provider>
+    <SearchContext.Provider value={{ search, results, lastQuery, changePage, loading, models, changeModel, currentModel, currentPage, getDocument: getProfile }}>{props.children}</SearchContext.Provider>
   )
 }
 export const SearchContext = createContext<SearchContent>({
@@ -114,8 +123,9 @@ export const SearchContext = createContext<SearchContent>({
   changeModel: (_model: string) => { },
   loading: false,
   models: [],
-  currentModel: "tfidf"
-
+  currentModel: "tfidf",
+  currentPage: 1,
+  getDocument: (_uuid: string) => { }
 })
 
 export type SearchContent = {
@@ -127,7 +137,8 @@ export type SearchContent = {
   models: string[],
   changeModel: (_model: string) => void,
   currentModel: string
-
+  currentPage: number
+  getDocument: (uuid: string) => SearchResult | void
 }
 
 export type SearchResult = {
