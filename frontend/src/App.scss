@@ -38,9 +38,14 @@
 }
 
 .searchResultCard {
+  &:hover {
+    cursor: pointer;
+  }
   &-container {
     display: flex;
+    align-items: center;
     img {
+      padding: 0 1em;
       cursor: pointer;
     }
     .content {
@@ -118,4 +123,11 @@
 }
 .mantine-Switch-track {
   border-radius: 15px;
+}
+.SearchResult {
+  .top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
 }

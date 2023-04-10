@@ -47,8 +47,8 @@ export const myTheme: MantineThemeOverride = {
     defaultRadius: 'md',
     radius: {
         xs: "0",
-        sm: "0",
-        md: "15",
+        sm: "10px",
+        md: "20px",
         lg: "0",
         xl: "0"
     },

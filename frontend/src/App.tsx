@@ -8,7 +8,7 @@ import SearchPage from './pages/SearchPage';
 import SearchProvider from './providers/SearchProvider';
 
 function App() {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('dark');
   const toggleColorScheme = (value?: ColorScheme) => {
     setColorScheme((colorScheme === 'dark' ? 'light' : 'dark'))
   }
