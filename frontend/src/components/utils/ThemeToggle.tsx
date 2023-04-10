@@ -1,22 +1,20 @@
-import { useMantineColorScheme, ActionIcon, Group } from '@mantine/core';
+import { useTheme } from '@emotion/react';
+import { useMantineColorScheme, ActionIcon, Group, Switch, useMantineTheme } from '@mantine/core';
 import { IconSun, IconMoonStars } from '@tabler/icons-react';
 
 export function ThemeToggle() {
     const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-
+    const theme = useMantineTheme()
     return (
         <Group position="center" my="xl">
-            <ActionIcon
-                onClick={() => toggleColorScheme()}
+            <Switch
+                checked={theme.colorScheme === 'dark'}
+                onChange={() => toggleColorScheme()}
                 size="lg"
-                sx={(theme) => ({
-                    backgroundColor:
-                        theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-                    color: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
-                })}
-            >
-                {colorScheme === 'dark' ? <IconSun size="1.2rem" /> : <IconMoonStars size="1.2rem" />}
-            </ActionIcon>
+                radius="xl"
+                onLabel={<IconSun color={theme.white} size="1.25rem" stroke={1.5} />}
+                offLabel={<IconMoonStars color={theme.colors.gray[6]} size="1.25rem" stroke={1.5} />}
+            />
         </Group>
     );
 }

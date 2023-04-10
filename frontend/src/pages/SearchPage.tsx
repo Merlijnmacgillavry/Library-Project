@@ -37,7 +37,7 @@ export default function SearchPage() {
         <AppShell
             styles={{
                 main: {
-                    background: colorScheme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
+                    background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
                 },
             }}
             navbarOffsetBreakpoint="sm"
@@ -66,7 +66,8 @@ export default function SearchPage() {
                                 mr="xl"
                             />
                         </MediaQuery>
-                        <Group>
+                        <Group style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <div></div>
                             <a href='/'><Image height='80' mx="auto" fit='contain' radius="md" src={logo} alt="Random image" /></a>
                             <ThemeToggle />
                         </Group>
@@ -115,11 +116,15 @@ function SearchResult() {
 
 function SearchComponent() {
     const { currentPage, changePage, lastQuery } = useContext(SearchContext)
-
+    const theme = useMantineTheme()
     return (
         <StickyComponent>
-            <div className='stickyContainer'>
-                <Stack>
+            <div className='stickyContainer' style={{
+
+                background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
+
+            }}>
+                <Stack >
                     <SearchBar />
                     {lastQuery !== "" && <Center><Pagination value={currentPage} onChange={changePage} total={10} /></Center>}
                 </Stack>

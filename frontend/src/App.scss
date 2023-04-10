@@ -100,11 +100,10 @@
 .modelBar {
   .mantine-Radio-label {
     font-weight: bold;
-    color: white;
   }
 }
 .stickyContainer {
-  background-color: #141517;
+  // background-color: #141517;
   padding: 1em 0;
   width: 100%;
 }
@@ -112,4 +111,11 @@
   position: sticky;
   z-index: 3;
   top: 80px;
+}
+
+.mantine-Switch-thumb {
+  border-radius: 50%;
+}
+.mantine-Switch-track {
+  border-radius: 15px;
 }

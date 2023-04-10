@@ -10,13 +10,11 @@ import SearchProvider from './providers/SearchProvider';
 function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
   const toggleColorScheme = (value?: ColorScheme) => {
-    console.log(colorScheme)
     setColorScheme((colorScheme === 'dark' ? 'light' : 'dark'))
   }
 
   return (
-    <MantineProvider theme={myTheme} withNormalizeCSS withGlobalStyles >
-
+    <MantineProvider theme={{ ...myTheme, colorScheme: colorScheme }} withNormalizeCSS withGlobalStyles >
       <ColorSchemeProvider toggleColorScheme={toggleColorScheme} colorScheme={'dark'}>
         <SearchProvider>
           <SearchPage />
