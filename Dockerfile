@@ -1,12 +1,12 @@
 # Build backend stage
 FROM python:3.10-slim-buster AS backend
 WORKDIR /app
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install -r requirements.txt
-COPY models /models/
-COPY logs /logs/
-COPY data /data/
-COPY data .
+COPY backend/models /models/
+COPY backend/logs /logs/
+COPY backend/data /data/
+COPY backend/data.csv .
 EXPOSE 5000
 CMD ["python", "app.py"]
 
