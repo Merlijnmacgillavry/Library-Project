@@ -1,0 +1,12 @@
+FROM python:3.10
+
+COPY requirements.txt /tmp/
+RUN pip install --requirement /tmp/requirements.txt
+
+COPY models /app/models/
+COPY data /app/data/
+COPY libraryProject /app/libraryProject/
+COPY app.py /app/
+WORKDIR /app
+
+CMD ["python", "app.py"]
